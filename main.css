@@ -1,6 +1,6 @@
 #product-overview {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("images/freedom.jpg") left 10% bottom 75%/cover no-repeat border-box,
+    url("images/freedom.jpg") center/cover no-repeat border-box,
     #ff1b68;
     /* background-image: url("freedom.jpg");
       background-size: cover;
@@ -12,7 +12,6 @@
     /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
     width: 100vw;
     height: 33vh;
-    margin-top: 2.75rem;
     /* border: 5px dashed red; */
     position: relative;
 }
@@ -28,28 +27,40 @@
     position: absolute;
     bottom: 5%;
     left: 3%;
+    font-size: 1.6rem;
 }
 
-.plan__list {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview{
+        height: 40vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+     font-size: 3rem;
+    }
 }
+
+@media (min-width: 60rem) {
+    #product-overview{
+        height: 50vh;
+        background-position: 50% 25%;
+
+    }
+}
+
 
 .plan {
     background: #d5ffdc;
     text-align: center;
     padding: 1rem;
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    margin: 0.5rem 0;
+    width: 100%;
 }
 
 .plan--highlighted {
     background: #19b84c;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
@@ -86,6 +97,42 @@
     margin: 0.5rem 0;
 }
 
+@media (min-width: 42rem){
+
+    .plan__list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .plan {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        height: 28rem;
+        /*margin: 0 0.5rem;*/
+    }
+
+    .plan h1,h2,h3 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin: 0.5rem 0;
+    }
+
+    .plan--highlighted {
+        height: 30rem;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        z-index: 50;
+
+    }
+}
+
 #key-features {
     background: #ff1b68;
     margin-top: 5rem;
@@ -104,11 +151,6 @@
     text-align: center;
 }
 
-.key-feature {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-}
 
 .key-feature__image {
     background: #ffcede;
@@ -125,6 +167,27 @@
     font-weight: bold;
     color: white;
     font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+
+@media (min-width: 41.9rem) {
+    .key-feature {
+        width: 30%;
+        max-width: 25rem;
+    }
+
+    .key-feature__description {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .key-feature__list {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* h1 {
